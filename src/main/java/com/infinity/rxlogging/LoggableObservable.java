@@ -1,10 +1,6 @@
 package com.infinity.rxlogging;
 
 
-import com.infinity.rxlogging.LogRxProceedingJoinPoint;
-import com.infinity.rxlogging.MessageManager;
-import com.infinity.rxlogging.ObservableInfo;
-
 public abstract class LoggableObservable {
 
   public final LogRxProceedingJoinPoint joinPoint;

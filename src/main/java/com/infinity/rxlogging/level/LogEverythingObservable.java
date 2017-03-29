@@ -49,9 +49,9 @@ public class LogEverythingObservable extends LoggableObservable {
                     if (!observableInfo.getObserveOnThread().isPresent()) {
                         observableInfo.setObserveOnThread(Thread.currentThread().getName());
                     }
+                    messageManager.printObservableItemTimeInfo(observableInfo);
                     messageManager.printObservableThreadInfo(observableInfo);
                     messageManager.printObservableOnUnsubscribe(observableInfo);
-                    messageManager.printObservableItemTimeInfo(observableInfo);
                 });
     }
 }
