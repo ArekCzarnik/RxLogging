@@ -14,19 +14,17 @@
  * limitations under the License.
  */
 
-package com.infinity.monitor;
+package com.infinity.aspect;
 
 import com.infinity.rxlogging.*;
-import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.stereotype.Component;
 
 @Aspect
 @Component
-public class ServiceMonitor {
+public class RXAspect {
 
 	@Around("@annotation(com.infinity.annotations.RXLoggable)")
 	public Object logServiceAccess(ProceedingJoinPoint joinPoint) throws Throwable {
