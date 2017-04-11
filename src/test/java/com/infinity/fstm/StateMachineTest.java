@@ -71,7 +71,6 @@ public class StateMachineTest {
     }
     @Test
     public void test() {
-
         StateMachine<SomeContext, Event> sm = new StateMachine<>(new SomeContext(), IDLE);
 
         sm.connect().subscribe();

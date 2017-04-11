@@ -29,16 +29,12 @@ public class RXAspect {
 	@Around("@annotation(com.infinity.annotations.RXLoggable)")
 	public Object logServiceAccess(ProceedingJoinPoint joinPoint) throws Throwable {
 		final LogRxProceedingJoinPoint proceedingJoinPoint = new LogRxProceedingJoinPoint(joinPoint);
-
 		final MessageManager messageManager = new MessageManager();
-
 		final LoggableObservableFactory observableFactory =
 				new LoggableObservableFactory(proceedingJoinPoint, messageManager,
 						new ObservableInfo(proceedingJoinPoint));
-
 		return new LogRxObservable(proceedingJoinPoint, messageManager,
 				observableFactory).getObservable();
-
 	}
 
 }
